@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COST ESTIMATION</title>
+	
+<style type="text/css">
+
+	.sidenav {
+    height: 100%;
+   	width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left:0 ;
+    background-color:#FF0000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover{
+	background-color: #8e94a0 ;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+
+ h1{
+ 	font-size: 40px;
+ }
+
+#main {
+    transition: margin-left .5s;
+}
+#htext{
+	width:100%;
+	height:60px;
+	background-color: red;
+}
+#edit {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+#crop {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+}
+
+
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+</style>
+
+</head>
+<body bgcolor>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><font color="white">&times;&nbsp;&nbsp;&nbsp;</font></a>
+  <a class="her" href="home.html"><font color="white" face="Goudy Old Style">Home</font>
+  <a href="fpac.html"><font color="white" face="Goudy Old Style">functional point analysis</font></a>
+ 
+  <a href="evac.html"><font color="white" face="Goudy Old Style">earned value analysis</font></a>
+  <a href="cococcc.html"><font color="white" face="Goudy Old Style">cocomo</font></a>
+  
+  
+</div>
+
+
+<div id="main">
+<div>
+	<table border="0" cellpadding="3" cellspacing="5" bgcolor="#FF0000" width="100%">
+		<tr>
+                        
+                        <td align="center" width="10%"><font color="white"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></font></td>
+			<td colspan="10" align="center" id="mainfont"><font size="8" color="white" face="Goudy Old Style">ESTIMATION TECHNIQUES</font></td>
+			
+		</tr>
+	</table>
+</div>
+
+<div>
+	<div class="centralimages">
+  <img align="center" class="imagechanger w3-animate-fading" src="pic3.jpg" width="100%" height="600px">
+  <img align="center" class="imagechanger w3-animate-fading" src="pic2.jpg" width="100%" height="600px">
+  <img align="center" class="imagechanger w3-animate-fading" src="pic1.jpg" width="100%" height="600px">
+</div>
+
+
+<p align="center" id="middle" ><font size="10" face="Goudy Old Style"><b><font color="#FF0000"> </font></b>SELECT TYPE OF ESTIMATION</font></p>
+<div id="crop" style="width: 100%; margin-bottom: 150px ;">
+<p style="margin-top: 50px; "><a href="fpac.html"><img src="FPA.png" width="500" height="410" style="float: left; margin-left: 100px; "><br></a></p>
+<table align="center">
+<tr align="center">
+   <td><b><h1>FUNCTION POINT ANALYSIS</h1></b></td>
+<tr>
+<tr><td>A function point is a "unit of measurement" to express the amount of business functionality an information system provides to a user. Function points are used to compute a functional size measurement of software. <br>
+The cost of a single unit is calculated from past projects.</td></tr>
+</table>
+
+</div>
+<br>
+<br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+<div id="crop" style="width: 100%; margin-bottom: 150px ;">
+<p style="margin-top: 50px; "><a href="evac.html"><img src="EVA.jpg" width="500" height="410" style="float: left; margin-left: 100px; "><br></a></p>
+<table align="center" cellspacing="10px">
+<tr align="center">
+   <td><b><h1>EARNED VALUE ANALYSIS</h1></b></td>
+</tr>
+<tr><td>Earned value management, earned value project management, or earned value performance management is a project management technique for measuring project performance and progress in an objective manner.</td></tr>
+</table>
+
+</div>
+
+<br>
+<br><br><br><br><br><br><br><br><br>
+
+<div id="crop" style="width: 100%; margin-bottom: 150px ;">
+<p style="margin-top: 50px; "><a href="cococcc.html"><img src="cocomo.png" width="500" height="410" style="float: left; margin-left: 100px; "><br></a></p>
+<table align="center">
+<tr align="center">
+   <td><b><h1>COCOMO</h1></b></td>
+<tr>
+<tr><td>The Constructive Cost Model is a procedural software cost estimation model developed by Barry W. Boehm. The model parameters are derived from fitting a regression formula using data from historical projects.</td></tr>
+</table>
+
+</div>
+
+
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br>
+	<br><br><br><br>
+
+
+<div style="width: 100%;">
+	<table width="100%" bgcolor="#FF0000" cellpadding="40">
+		<tr>
+		<td width="50%" align="center">Developed by dhanush</td></tr>
+	</table>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+	 var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("imagechanger");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "300px";
+    document.body.style.backgroundColor = "898e92";
+	}
+
+	function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "898e92";
+	}
+</script>
+</body>
+</html>

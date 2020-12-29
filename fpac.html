@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COST ESTIMATION</title>
+	
+<style type="text/css">
+
+	.sidenav {
+    height: 100%;
+   	width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FF0000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover{
+	background-color: #8e94a0 ;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+ h1{
+ 	font-size: 40px;
+ }
+
+#main {
+    transition: margin-left .5s;
+}
+#htext{
+	width:100%;
+	height:60px;
+	background-color: red;
+}
+#edit {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+#crop {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+}
+
+
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+</style>
+
+</head>
+<body bgcolor="pink">
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><font color="white">&times;&nbsp;&nbsp;&nbsp;</font></a>
+  <a class="her" href="home.html"><font color="white" face="Goudy Old Style">Home</font>
+  <a href="fpac.html"><font color="white" face="Goudy Old Style">functional point analysis</font></a>
+ 
+  <a href="evac.html"><font color="white" face="Goudy Old Style">earned value analysis</font></a>
+  <a href="cococcc.html"><font color="white" face="Goudy Old Style">cocomo</font></a>
+  
+  
+</div>
+
+
+<div id="main">
+<div>
+	<table border="0" cellpadding="3" cellspacing="5" bgcolor="#FF0000" width="100%">
+		<tr>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			<td colspan="10" align="center" id="mainfont"><font size="8" color="white" face="Goudy Old Style">ESTIMATION TECHNIQUE</font></td>
+			<td align="center" width="10%"><font color="white"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></font></td>
+		</tr>
+	</table>
+</div>
+
+<font face='Times' >
+      <table align="center"><tr><td><H1 aligin="center">
+          FUNCTION-POINT-ANALYSIS
+      </H1></td></tr>
+    <tr><td>Choose an option in the drop-down list and display that option.</td> </tr>
+    </table>
+        <br>
+
+    <table align="center">
+       <tr>
+         <td colspan="2" align="center">No.of user inputs
+          </td> 
+       </tr>
+        <tr>
+          <td>
+              <input type="number" id="ei" value="external inputs">
+          </td>
+          <td>
+              <select id="exter">
+                  <option>simple</option>
+                  <option>average</option>
+                  <option>complex</option>
+                </select>
+
+          </td>
+        </tr>
+
+
+        <tr>
+            <td colspan="2" align="center">No.of user outputs
+             </td> 
+          </tr>
+           <tr>
+             <td>
+                <input type="number" id="eo" value="external outputs">
+             </td>
+             <td>
+                <select id="exterop">
+                    <option>simple</option>
+                    <option>average</option>
+                    <option>complex</option>
+                  </select>
+   
+             </td>
+           </tr>
+
+           <tr>
+              <td colspan="2" align="center">No.of  user inquries
+               </td> 
+            </tr>
+             <tr>
+               <td>
+                  <input type="number" id="in" value="inquries">
+               </td>
+               <td>
+                  <select id="inq">
+                      <option>simple</option>
+                      <option>average</option>
+                      <option>complex</option>
+                      </select>
+     
+               </td>
+             </tr>
+
+
+
+             <tr>
+                <td colspan="2" align="center">No.of files
+                 </td> 
+              </tr>
+               <tr>
+                 <td>
+                    <input type="number" id="fi" value="files">
+                 </td>
+                 <td>
+                    <select id="fil">
+                        <option>simple</option>
+                        <option>average</option>
+                        <option>complex</option>
+                        </select>
+       
+                 </td>
+               </tr>
+
+
+               <tr>
+                  <td colspan="2" align="center">No.of External interfaces
+                   </td> 
+                </tr>
+                 <tr>
+                   <td>
+                      <input type="number" id="ein" value="external interfaces">
+                   </td>
+                   <td>
+                      <select id="exin">
+                          <option>simple</option>
+                          <option>average</option>
+                          <option>complex</option>
+                          </select>
+         
+                   </td>
+                 </tr>
+
+    </table>
+    <br>
+    <br>
+
+    
+<table align="center">
+    <tr>
+        <td colspan="2" align="center">Select severity for ci
+         </td> 
+      </tr>
+       <tr>
+         <td>
+            1. Does the system require reliable backup and recovery?  </td>
+         <td>
+            <select id="q1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                </select>
+
+         </td>
+       </tr>
+
+
+        <tr>
+           <td>
+              2. Are data communications required? </td>
+           <td>
+              <select id="q2">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                  </select>
+  
+           </td>
+         </tr>
+
+         <tr>
+            <td>
+                3. Are there distributed processing functions? </td>
+            <td>
+               <select id="q3">
+                   <option>1</option>
+                   <option>2</option>
+                   <option>3</option>
+                   <option>4</option>
+                   <option>5</option>
+                   <option>6</option>
+                   </select>
+   
+            </td>
+          </tr>
+
+          <tr>
+              <td>
+                  4. Is performance critical? </td>
+              <td>
+                 <select id="q4">
+                     <option>1</option>
+                     <option>2</option>
+                     <option>3</option>
+                     <option>4</option>
+                     <option>5</option>
+                     <option>6</option>
+                     </select>
+     
+              </td>
+            </tr>
+
+            <tr>
+                <td>
+                    5. Will the system run in an existing, heavily utilized operational environment? </td>
+                <td>
+                   <select id="q5">
+                       <option>1</option>
+                       <option>2</option>
+                       <option>3</option>
+                       <option>4</option>
+                       <option>5</option>
+                       <option>6</option>
+                       </select>
+       
+                </td>
+              </tr>
+
+              <tr>
+                  <td>
+                      6. Does the system require on-line data entry? </td>
+                  <td>
+                     <select id="q6">
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                         <option>6</option>
+                         </select>
+         
+                  </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        7. Does the on-line data entry require the input transaction to be built over multiple screens or operations? </td>
+                    <td>
+                       <select id="q7">
+                           <option>1</option>
+                           <option>2</option>
+                           <option>3</option>
+                           <option>4</option>
+                           <option>5</option>
+                           <option>6</option>
+                           </select>
+           
+                    </td>
+                  </tr>
+
+                  <tr>
+                      <td>
+                          8. Are the master files updated on-line? </td>
+                      <td>
+                         <select id="q8">
+                             <option>1</option>
+                             <option>2</option>
+                             <option>3</option>
+                             <option>4</option>
+                             <option>5</option>
+                             <option>6</option>
+                             </select>
+             
+                      </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            9. Are the inputs, outputs, files, or inquiries complex?  </td>
+                        <td>
+                           <select id="q9">
+                               <option>1</option>
+                               <option>2</option>
+                               <option>3</option>
+                               <option>4</option>
+                               <option>5</option>
+                               <option>6</option>
+                               </select>
+               
+                        </td>
+                      </tr>
+                      <tr>
+                          <td>
+                              10. Is the internal processing complex?</td>
+                          <td>
+                             <select id="q10">
+                                 <option>1</option>
+                                 <option>2</option>
+                                 <option>3</option>
+                                 <option>4</option>
+                                 <option>5</option>
+                                 <option>6</option>
+                                 </select>
+                 
+                          </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                11. Is the code designed to be reusable?</td>
+                            <td>
+                               <select id="q11">
+                                   <option>1</option>
+                                   <option>2</option>
+                                   <option>3</option>
+                                   <option>4</option>
+                                   <option>5</option>
+                                   <option>6</option>
+                                   </select>
+                   
+                            </td>
+                          </tr>
+                         
+                          <tr>
+                              <td>
+                                  12. Are conversion and installation included in the design?</td>
+                              <td>
+                                 <select id="q12">
+                                     <option>1</option>
+                                     <option>2</option>
+                                     <option>3</option>
+                                     <option>4</option>
+                                     <option>5</option>
+                                     <option>6</option>
+                                     </select>
+                     
+                              </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    13. Is the system designed for multiple installations in different organizations?</td>
+                                <td>
+                                   <select id="q13">
+                                       <option>1</option>
+                                       <option>2</option>
+                                       <option>3</option>
+                                       <option>4</option>
+                                       <option>5</option>
+                                       <option>6</option>
+                                       </select>
+                       
+                                </td>
+                              </tr>
+
+                              <tr>
+                                  <td>
+                                      14. Is the application designed to facilitate change and ease of use by the user?</td>
+                                  <td>
+                                     <select id="q14">
+                                         <option>1</option>
+                                         <option>2</option>
+                                         <option>3</option>
+                                         <option>4</option>
+                                         <option>5</option>
+                                         <option>6</option>
+                                         </select>
+                         
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    Enter the organizational average productivity for this system
+                                  </td>
+                                  <td>
+                                    <input type="number" id="fpm" value="function per month">
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    Enter the labour rate per month
+                                  </td>
+                                  <td>
+                                    <input type="number" id="lab" value="labour rate per month">
+                                  </td>
+                                </tr>
+
+     <tr>
+       <td align="center">
+          <input type="button" id="submit" onclick="myFunction()" value="Submit">
+       </td>
+     </tr>
+     <tr>
+     <td align="center">
+     <h1>RESULT</h1>
+     </td>
+     </tr>
+<tr>
+  <td align="center">
+    ADUSTED FUNCTIONAL POINT: <p id="demo"></p>
+    COST PER FUNCTION: <p id="demo1"></p>
+    PORJECT COST: <p id="demo2"></p>
+    EFFORT PERSONS-MONTH: <p id="demo3"></p>
+   
+  </td>
+</tr>
+
+</table>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("exter");
+  var i = x.selectedIndex;
+  if(x.options[i].text=="simple")
+  {
+    var ex=document.getElementById("ei").value;
+    var exi=ex*3;
+  
+
+  }
+ else if(x.options[i].text=="average")
+  {
+    var ex=document.getElementById("ei").value;
+    var exi=ex*4;
+   
+  }
+  else if(x.options[i].text=="complex")
+  {
+    var ex=document.getElementById("ei").value;
+    var exi=ex*6;
+    
+  }
+
+
+
+
+  var xo = document.getElementById("exterop");
+  var io = xo.selectedIndex;
+  if(x.options[io].text=="simple")
+  {
+    var exo=document.getElementById("eo").value;
+    var exto=exo*4;
+   
+
+  }
+ else if(xo.options[io].text=="average")
+  {
+    var exo=document.getElementById("eo").value;
+    var exto=exo*5;
+    
+  }
+  else if(xo.options[i].text=="complex")
+  {
+    var exo=document.getElementById("eo").value;
+    var exto=exo*7;
+   
+  }
+
+
+
+  var enq = document.getElementById("inq");
+  var enqu = enq.selectedIndex;
+  if(enq.options[enqu].text=="simple")
+  {
+    var enqi=document.getElementById("in").value;
+    var enqur=enqi*3;
+   
+
+  }
+ else if(enq.options[enqu].text=="average")
+  {
+    var enqi=document.getElementById("in").value;
+    var enqur=enqi*4;
+    
+  }
+  else if(enq.options[enqu].text=="complex")
+  {
+    var enqi=document.getElementById("in").value;
+    var enqur=enqi*6;
+   
+  }
+
+
+ 
+  var lgfi = document.getElementById("fil");
+  var lgfil = lgfi.selectedIndex;
+  if(lgfi.options[lgfil].text=="simple")
+  {
+    var logf=document.getElementById("fi").value;
+    var logfi=logf*7;
+   
+
+  }
+ else if(lgfi.options[lgfil].text=="average")
+  {
+    var logf=document.getElementById("fi").value;
+    var logfi=logf*10;
+    
+  }
+  else if(lgfi.options[lgfil].text=="complex")
+  {
+    var logf=document.getElementById("fi").value;
+    var logfi=logf*15;
+   
+  }
+
+
+
+
+  var einf = document.getElementById("exin");
+  var einfa = einf.selectedIndex;
+  if(einf.options[einfa].text=="simple")
+  {
+    var einfe=document.getElementById("ein").value;
+    var einfc=einfe*5;
+   
+
+  }
+ else if(einf.options[einfa].text=="average")
+  {
+    var einfe=document.getElementById("ein").value;
+    var einfc=einfe*7;
+    
+  }
+  else if(einf.options[einfa].text=="complex")
+  {
+    var einfe=document.getElementById("ein").value;
+    var einfc=einfe*10;
+   
+  }
+
+
+
+  var c1 = document.getElementById("q1").value;
+  
+  var c2 = document.getElementById("q2").value;
+  var c3 = document.getElementById("q3").value;
+  var c4 = document.getElementById("q4").value;
+  var c5 = document.getElementById("q5").value;
+  var c6 = document.getElementById("q6").value;
+  var c7 = document.getElementById("q7").value;
+  var c8 = document.getElementById("q8").value;
+  var c9 = document.getElementById("q9").value;
+  var c10 = document.getElementById("q10").value;
+  var c11 = document.getElementById("q11").value;
+  var c12 = document.getElementById("q12").value;
+  var c13= document.getElementById("q13").value;
+  var c14= document.getElementById("q14").value;
+  
+  var cz=Number(c1)+Number(c2)+Number(c3)+Number(c4)+Number(c5)+Number(c6)+Number(c7)+Number(c8)+Number(c9)+Number(c10)+Number(c11)+Number(c12)+Number(c13)+Number(c14); 
+
+
+  var sum=exi+exto+enqur+logfi+einfc;
+  var cc=cz/100;
+  var vaf=0.65+cc;
+ 
+  var afp=sum*vaf;
+
+  var far=document.getElementById("fpm").value;
+  var lar=document.getElementById("lab").value;
+  var cpf=lar/far;
+  var budget=cpf*afp;
+  var effort=budget/lar;
+  document.getElementById("demo").innerHTML=afp;
+  document.getElementById("demo1").innerHTML=cpf;
+  document.getElementById("demo2").innerHTML=budget;
+  document.getElementById("demo3").innerHTML=effort;
+  
+
+}
+</script>
+</font>
+
+
+
+
+
+
+
+
+
+
+
+<div style="width: 100%;">
+	<table width="100%" bgcolor="#FF0000" cellpadding="40">
+		<tr>
+		<td width="50%" align="center">Developed by dhanush</td></tr>
+	</table>
+</div>
+
+
+<script type="text/javascript">
+
+	 var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("imagechanger");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "300px";
+    document.body.style.backgroundColor = "898e92";
+	}
+
+	function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "898e92";
+	}
+</script>
+</body>
+</html>

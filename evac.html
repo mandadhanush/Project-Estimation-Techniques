@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COST ESTIMATION</title>
+	
+<style type="text/css">
+
+	.sidenav {
+    height: 100%;
+   	width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FF0000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav a:hover{
+	background-color: #8e94a0 ;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+
+ h1{
+ 	font-size: 40px;
+ }
+
+#main {
+    transition: margin-left .5s;
+}
+#htext{
+	width:100%;
+	height:60px;
+	background-color: red;
+}
+#edit {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+#crop {
+	width:200px;
+    height:150px;
+    background-color: green;
+    float:left;
+}
+}
+
+
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+
+</style>
+
+</head>
+<body bgcolor="pink" align="center">
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><font color="white">&times;&nbsp;&nbsp;&nbsp;</font></a>
+  <a class="her" href="home.html"><font color="white" face="Goudy Old Style">Home</font>
+  <a href="fpac.html"><font color="white" face="Goudy Old Style">functional point analysis</font></a>
+ 
+  <a href="evac.html"><font color="white" face="Goudy Old Style">earned value analysis</font></a>
+  <a href="cococcc.html"><font color="white" face="Goudy Old Style">cocomo</font></a>
+  
+  
+</div>
+
+
+<div id="main">
+<div>
+	<table border="0" cellpadding="3" cellspacing="5" bgcolor="#FF0000" width="100%">
+		<tr>
+                        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+			<td colspan="10" align="center" id="mainfont"><font size="8" color="white" face="Goudy Old Style">ESTIMATION TECHNIQUE</font></td>
+			<td align="center" width="10%"><font color="white"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></font></td>
+		</tr>
+	</table>
+</div>
+
+<font face='Times' >
+   
+    <H1>
+                    EARNED-VALUE-ANALYSIS
+            </H1>
+        <p>Budget for project</p>
+        <input type="number" id="bac" value="Budget for project">
+        <p>Time to complete whole project(in days) </p>
+        <input type="number" id="tt" value="Time to complete whole project">
+        <p>No.of days completed</p>
+        <input type="number" id="at" value="No.of days completed">
+        <p>% of work completed</p>
+        <input type="number" id="ev" value="Earned value">
+        <p>Actual cost </p>
+        <input type="number" id="ac" value="actual cost"><br><br>
+        <input type="button" id="submit" onclick="myFunction()" value="Submit">   
+        <br><br><br><br>
+        
+
+
+        <h1>RESULT</h1>
+        scheduled variance :<label id="demo1"></label><br><br><br>
+
+        cost variance:<label id="demo2"></label><br><br><br>
+        
+        schedule performance index:<label id="demo3"></label><br><br><br>
+        
+        cost performance index:<label id="demo4"></label><br><br><br>
+        
+        estimate at completion:<label id="demo5"></label><br><br><br>
+        
+        estimate to complete:<label id="demo6"></label><br><br><br>
+        
+        variance at completion:<label id="demo7"></label><br>
+        
+        <p id="demo7"></p>
+        <p id="demo8"></p>
+        <p id="demo9"></p>
+ 
+
+    <script >
+       function myFunction()
+       {
+               a=document.getElementById("bac").value;
+               b=document.getElementById("tt").value;
+               c=document.getElementById("at").value;
+               d=document.getElementById("ev").value;
+               e=document.getElementById("ac").value;
+               
+               erv=(d/100)*a;
+               pv=(a*c)/b;
+               sv=erv-pv;
+               cv=erv-e;
+               spi=erv/pv;
+               cpi=erv/e;
+               eac=a/cpi;
+               etc=eac-e;
+               vac=a-eac;
+
+                
+              document.getElementById("demo1").innerHTML=sv;
+              document.getElementById("demo2").innerHTML=cv;
+              document.getElementById("demo3").innerHTML=spi;
+              document.getElementById("demo4").innerHTML=cpi;
+              document.getElementById("demo5").innerHTML=eac;
+              document.getElementById("demo6").innerHTML=etc;
+              document.getElementById("demo7").innerHTML=vac;
+
+              if(spi<1)
+              {
+                  document.getElementById("demo8").innerHTML="Behind the schedule!";
+              }
+              else
+              {
+                document.getElementById("demo8").innerHTML="Project is on time!";
+             
+              }
+
+              if(cpi<1)
+              {
+                  document.getElementById("demo9").innerHTML="Over budget!";
+              }
+              else
+              {
+                document.getElementById("demo9").innerHTML="On  budget!";
+             
+              }
+             
+
+        }
+    </script>
+
+</font>
+
+
+
+
+
+
+
+
+
+
+
+<div style="width: 100%;">
+	<table width="100%" bgcolor="#FF0000" cellpadding="40">
+		<tr>
+		<td width="50%" align="center">Developed by dhanush</td></tr>
+	</table>
+</div>
+
+
+<script type="text/javascript">
+
+	 var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("imagechanger");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "300px";
+    document.getElementById("main").style.marginLeft = "300px";
+    document.body.style.backgroundColor = "898e92";
+	}
+
+	function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "898e92";
+	}
+</script>
+</body>
+</html>
